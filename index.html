@@ -400,14 +400,6 @@
         line-height: 1.5;
       }
 
-      .friction-card.hot {
-        background: var(--ink);
-        color: #fff;
-      }
-
-      .friction-card.hot p,
-      .friction-card.hot span { color: #bdbdbd; }
-
       .friction-board {
         margin-top: clamp(34px, 5vw, 72px);
         border: 1px solid var(--ink);
@@ -916,6 +908,7 @@
       .providio-core span,
       .incoming-signal-card span,
       .convergence-label,
+      .execution-output-label,
       .execution-output span {
         color: var(--muted);
         font-family: "Geist Mono", "SF Mono", ui-monospace, monospace;
@@ -1028,6 +1021,13 @@
         min-height: 110px;
         padding: 16px;
         background: var(--paper);
+      }
+
+      .execution-output-label {
+        grid-column: 1 / -1;
+        padding: 10px 14px;
+        background: var(--surface);
+        color: var(--muted);
       }
 
       .providio-convergence.scroll-bound .incoming-signal-card,
@@ -2350,10 +2350,10 @@
               <strong>Ad platforms optimize for themselves.</strong>
               <p>Google, Meta, and email each report their own truth. Nobody optimizes for the route.</p>
             </div>
-            <div class="friction-card hot">
+            <div class="friction-card">
               <span>02</span>
               <strong>Every insight starts with an export.</strong>
-              <p>Performance becomes CSVs, pivots, stale campaign audits, and final_v7 spreadsheets.</p>
+              <p>Performance becomes CSVs, pivots, stale campaign audits, and manual reconciliations.</p>
             </div>
             <div class="friction-card">
               <span>03</span>
@@ -2394,10 +2394,11 @@
                 </div>
               </div>
               <div class="execution-output-rail" aria-label="Execution outputs after convergence">
-                <div class="execution-output"><span>Campaign</span><strong>Route-aware launch</strong><p>Assets and audience.</p></div>
+                <div class="execution-output-label">Unified execution output</div>
+                <div class="execution-output"><span>Marketing action</span><strong>Route-aware campaign</strong><p>Assets and audience.</p></div>
+                <div class="execution-output"><span>Revenue action</span><strong>Fare-aware decision</strong><p>Revenue context applied.</p></div>
                 <div class="execution-output"><span>Decision trace</span><strong>Inputs captured</strong><p>Tradeoffs and rationale.</p></div>
-                <div class="execution-output"><span>Pricing</span><strong>Fare-aware action</strong><p>Revenue context applied.</p></div>
-                <div class="execution-output"><span>Commercial</span><strong>Per-flight decision</strong><p>Teams aligned.</p></div>
+                <div class="execution-output"><span>Execution package</span><strong>Ready for approval</strong><p>Teams aligned.</p></div>
               </div>
             </div>
             <div class="solution-steps" aria-label="Providio execution sequence">
